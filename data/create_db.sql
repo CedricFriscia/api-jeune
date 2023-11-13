@@ -1,0 +1,20 @@
+BEGIN;
+
+DROP TABLE IF EXISTS "candidat";
+
+
+CREATE TABLE "candidat" (
+ 
+  "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  "lastname" VARCHAR(64) NOT NULL DEFAULT '',
+  "firstname" VARCHAR(64) NOT NULL DEFAULT '',
+  "search" VARCHAR(255) NOT NULL DEFAULT '',
+  "birthday" VARCHAR(255) NOT NULL,
+  "linkedin" VARCHAR(255) NOT NULL,
+  "description" TEXT NOT NULL DEFAULT '', 
+ 
+  "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  "updated_at" TIMESTAMPTZ
+);
+
+COMMIT;

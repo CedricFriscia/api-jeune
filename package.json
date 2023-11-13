@@ -1,0 +1,21 @@
+{
+   "name": "api-jeune",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "db:reset": "psql -U jeune -d jeune -f ./data/create_db.sql",
+      "db:populate": "psql -U jeune -d jeune -f ./data/populate_db.sql"
+   },
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "path": "^0.12.7",
+      "pg": "^8.11.3",
+      "pg-hstore": "^2.3.4",
+      "sequelize": "^6.33.0"
+   }
+}
